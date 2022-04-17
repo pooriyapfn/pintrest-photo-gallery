@@ -27,17 +27,17 @@ export default function Header({ setSearchQuery }) {
       } shadow-md bg-white items-center justify-center flex`}
     >
       <div className="rounded-full flex flex-row  mx-4 my-1 py-2 px-4 justify-center items-center w-full">
-        <img className="h-12 mx-10" src={logo} alt="" />
+        <img className="h-12 lg:mx-10" src={logo} alt="" />
 
         <input
           placeholder="search..."
           type="text"
-          className="w-8/12 p-2 rounded-3xl bg-stone-100 px-4"
+          className="w-full lg:w-8/12 p-2 rounded-3xl bg-stone-100 px-4 mx-2"
           onChange={onChange}
         />
         <a
           href=""
-          className="rounded-3xl bg-slate-400 px-4 py-2 mx-8 text-white hover:bg-slate-500"
+          className="rounded-3xl bg-slate-400 px-4 py-2 lg:mx-8 text-white hover:bg-slate-500"
         >
           Home
         </a>
