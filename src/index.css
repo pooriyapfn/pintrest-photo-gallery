@@ -2,16 +2,106 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Montserrat ;
+}
+
+*{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.hrow-1 { 
+  grid-row-end: span 36;
+}
+.hrow-1 img { 
+max-height: 150px;
+}
+
+.hrow-2 { 
+  grid-row-end: span 33;
+}
+.hrow-2 img {
+  height: 250px;
+}
+
+.hrow-3 { 
+  grid-row-end: span 39;
+}
+
+.hrow3 img {
+  height: 300px;
+}
+
+.hrow-4 { 
+  grid-row-end: span 46;
+}
+
+.hrow-4 img {
+  height: 380px;
+}
+
+.hrow-5 { 
+  grid-row-end: span 54;
+}
+
+.hrow-5 img { 
+  height: 450px;
+}
+
+.text-ellipsis{
+  text-overflow:ellipsis;
+  overflow:hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+
+.flxh-1 { 
+  height:250px
+}
+.flxh-1 img { 
+max-height: 150px;
+}
+
+.flxh-2 { 
+ height:300px
+}
+.flxh-2 img {
+  height: 250px;
+}
+
+.flxh-3 { 
+  height:350px
+}
+
+.flxh-3 img {
+  height: 300px;
+}
+
+.flxh-4 { 
+  height:440px
+}
+
+.flxh-4 img {
+  height: 380px;
+}
+
+.flxh-5 { 
+  height:500px
+}
+
+.flxh-5 img { 
+  height: 450px;
 }
