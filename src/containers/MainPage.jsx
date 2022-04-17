@@ -7,8 +7,7 @@ export default function MainPage({ searchQuery }) {
   const [modalData, setModalData] = useState(null);
 
   useEffect(() => {
-    console.log(modalData);
-    console.log("clicked");
+    // console.log(modalData);
   }, [modalData]);
 
   const handleClickModal = (item) => {

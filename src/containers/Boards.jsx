@@ -23,9 +23,9 @@ export default function Boards({ handleClick, searchQuery }) {
   });
 
   const getItems = (page) => {
-    console.log("in this function");
+    // console.log("in this function");
     axios
-      .get(`http://xoosha.com/ws/1/test.php?offset=${page}`)
+      .get(`https://xoosha.com/ws/1/test.php?offset=${page}`)
       .then(function (response) {
         // handle success
         setData({ items: [...data.items, ...response.data] });
@@ -45,24 +45,20 @@ export default function Boards({ handleClick, searchQuery }) {
   };
 
   const handleInView = (inView, entry) => {
-    console.log("inview : ", inView, entry.boundingClientRect.y);
-    console.log(entry[0]);
+    // console.log("inview : ", inView, entry.boundingClientRect.y);
+    // console.log(entry[0]);
     if (inView && entry.boundingClientRect.y > entryY) {
-      console.log("fired");
       setLoading(true);
       setPage(page + 60);
-      console.log("page is : ", page);
       getItems(page);
     }
     setEntryY(entry.boundingClientRect.y);
   };
 
   const fetchData = () => {
-    console.log("fetch...!");
     if (!searchActive) {
       setLoading(true);
       setPage(page + 60);
-      console.log("page is : ", page);
       getItems(page);
     }
   };
@@ -78,7 +74,6 @@ export default function Boards({ handleClick, searchQuery }) {
   }, []);
 
   useEffect(() => {
-    console.log("in:", searchQuery);
     if (searchQuery == "") {
       setSearchActive(false);
       setSearchResult({ items: [] });
@@ -89,7 +84,6 @@ export default function Boards({ handleClick, searchQuery }) {
     const newQuery = data.items.filter((item) => {
       return item.name.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1;
     });
-    console.log("QQQQQQL", newQuery);
     setSearchResult({ items: newQuery });
     setLoading(false);
   }, [searchQuery]);
